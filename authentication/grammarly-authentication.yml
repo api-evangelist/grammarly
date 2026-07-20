@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.grammarly.com/oauth-credentials.html
+docs: https://developer.grammarly.com/your-first-api-request.html
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials]
+  api_key_in: []
+  token_endpoint: https://auth.grammarly.com/v4/api/oauth2/token
+  transport: Bearer access token in the Authorization header
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  token_url: https://auth.grammarly.com/v4/api/oauth2/token
+  token_request:
+    method: POST
+    parameters: [grant_type, client_id, client_secret, scope]
+  credential_source: >-
+    Client ID and Client Secret are issued from the Grammarly Admin panel
+    (Organization > Configurations > OAuth 2.0 credentials). Each credential is
+    assigned one or more OAuth scopes limiting it to specific APIs.
+  request_auth:
+    header: Authorization
+    format: Bearer <access_token>
+  sources: [developer.grammarly.com/oauth-credentials.html]
+notes: >-
+  Grammarly's enterprise developer APIs authenticate with OAuth 2.0 using the
+  client-credentials grant. A machine-to-machine access token is obtained from
+  the token endpoint with the org-issued client_id/client_secret plus the
+  requested scope, then presented as a Bearer token against the API base URL
+  https://api.grammarly.com/ecosystem/api/. See scopes/grammarly-scopes.yml for
+  the scope catalog.
