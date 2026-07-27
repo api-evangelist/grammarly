@@ -1,0 +1,34 @@
+# Grammarly
+
+> Grammarly is an AI writing-assistance company whose enterprise developer platform exposes REST APIs that bring Grammarly's writing intelligence into an organization's own applications, BI systems, and IT tooling — covering writing-quality scoring, AI-generated-content detection, plagiarism detection, communication analytics, and license management. APIs are secured with OAuth 2.0 client credentials and scoped permissions. Base URL: https://api.grammarly.com/ecosystem/api/
+
+## APIs
+
+- [Analytics API](https://developer.grammarly.com/): Programmatic access to Grammarly usage and communication-performance analytics (GA). Scope: analytics-api:read.
+- [License Management API](https://developer.grammarly.com/): Allocate and reallocate Grammarly licenses for IT governance / software asset management (GA). Scopes: users-api:read, users-api:write.
+- [Writing Score API](https://developer.grammarly.com/): Score content on correctness, engagement, clarity, and delivery (Beta). Scopes: scores-api:read, scores-api:write.
+- [AI Detection API](https://developer.grammarly.com/): Detect AI-generated content and demonstrate original authorship (Beta).
+- [Plagiarism Detection API](https://developer.grammarly.com/): Detect plagiarism against published sources (Beta).
+- [Certified Readability Score API](https://www.grammarly.com/apis): Clarity/readability checks for compliance (coming soon).
+- [Tone Analysis API](https://www.grammarly.com/apis): Tone checks to ensure messages resonate (coming soon).
+
+## Authentication
+
+- [OAuth 2.0 credentials](https://developer.grammarly.com/oauth-credentials.html): Client-credentials grant. Token endpoint https://auth.grammarly.com/v4/api/oauth2/token; present the Bearer access token as `Authorization: Bearer <token>`.
+- [Your first API request](https://developer.grammarly.com/your-first-api-request.html): Worked example (Bash/Python/Java/Node.js/C#).
+
+## Docs
+
+- [Developer Portal](https://developer.grammarly.com/)
+- [Grammarly APIs overview](https://www.grammarly.com/apis)
+- [Support / Help Center](https://support.grammarly.com/)
+- [Status page](https://status.grammarly.com)
+- [Trust Center](https://www.grammarly.com/trust)
+- [Security](https://www.grammarly.com/security)
+
+## Specs
+
+- [OAuth scopes catalog](https://raw.githubusercontent.com/api-evangelist/grammarly/refs/heads/main/scopes/grammarly-scopes.yml)
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/grammarly/refs/heads/main/authentication/grammarly-authentication.yml)
+- [API conventions](https://raw.githubusercontent.com/api-evangelist/grammarly/refs/heads/main/conventions/grammarly-conventions.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/grammarly/refs/heads/main/lifecycle/grammarly-lifecycle.yml)

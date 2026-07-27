@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.grammarly.com/oauth-credentials.html
+docs: https://developer.grammarly.com/oauth-credentials.html
+schemes:
+- name: OAuth2ClientCredentials
+  flow: clientCredentials
+  token_url: https://auth.grammarly.com/v4/api/oauth2/token
+scopes:
+- scope: scores-api:read
+  description: Read-only access to the Writing Score API.
+  api: Writing Score API
+- scope: scores-api:write
+  description: Write access to the Writing Score API.
+  api: Writing Score API
+- scope: analytics-api:read
+  description: Read-only access to the Analytics API (usage and communication statistics).
+  api: Analytics API
+- scope: users-api:read
+  description: Read-only access to the License Management API.
+  api: License Management API
+- scope: users-api:write
+  description: Write access to the License Management API (license allocation/reallocation).
+  api: License Management API
+notes: >-
+  Scopes are assigned to each OAuth 2.0 credential in the Grammarly Admin panel
+  and requested via the `scope` parameter of the client-credentials token
+  request. The Beta AI Detection and Plagiarism Detection APIs did not publish
+  dedicated scope names on the credentials page at capture time.

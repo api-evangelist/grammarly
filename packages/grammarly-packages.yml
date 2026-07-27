@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/org/grammarly
+notes: >-
+  Grammarly's current enterprise REST APIs (Analytics, Writing Score, AI
+  Detection, Plagiarism, License Management) are documented with copy-paste code
+  samples in Bash/Python/Java/Node.js/C# but ship no dedicated first-party REST
+  client SDK package. The first-party libraries published to the @grammarly npm
+  organization below are client/editor and front-end libraries; the
+  @grammarly/textarea plugin family relates to the (deprecated Jan 2024)
+  Grammarly Text Editor SDK. Numerous unofficial "grammarly-api" packages exist
+  on npm and are excluded here.
+packages:
+- language: javascript
+  registry: npm
+  name: "@grammarly/textarea"
+  url: https://www.npmjs.com/package/@grammarly/textarea
+  install: npm install @grammarly/textarea
+  official: true
+  repository: https://github.com/grammarly/javascript-plugin
+  description: Grammarly plugin for textarea elements (Text Editor SDK era).
+  status: deprecated
+- language: javascript
+  registry: npm
+  name: "@grammarly/react-textarea"
+  url: https://www.npmjs.com/package/@grammarly/react-textarea
+  install: npm install @grammarly/react-textarea
+  official: true
+  description: React binding for the Grammarly textarea plugin.
+  status: deprecated
+- language: javascript
+  registry: npm
+  name: "@grammarly/vue-textarea"
+  url: https://www.npmjs.com/package/@grammarly/vue-textarea
+  install: npm install @grammarly/vue-textarea
+  official: true
+  description: Vue binding for the Grammarly textarea plugin.
+  status: deprecated
+- language: javascript
+  registry: npm
+  name: "@grammarly/focal"
+  url: https://www.npmjs.com/package/@grammarly/focal
+  install: npm install @grammarly/focal
+  official: true
+  description: Grammarly's open-source FRP UI library (React + RxJS observables + lenses).

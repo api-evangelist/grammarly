@@ -1,21 +1,95 @@
 aid: grammarly
 name: Grammarly
-description: 'Grammarly is a company surfaced as a portfolio company of ivp and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Grammarly is an AI writing-assistance company whose enterprise developer
+  platform exposes a set of REST APIs that bring Grammarly's writing
+  intelligence into an organization's own applications, business-intelligence
+  systems, and IT tooling. The Grammarly APIs cover writing-quality scoring, AI
+  generated-content detection, plagiarism detection, communication analytics,
+  and license management, all secured with OAuth 2.0 client credentials and
+  scoped permissions against the base URL https://api.grammarly.com/ecosystem/api/.
+  Certified Readability Score and Tone Analysis APIs are announced as coming
+  soon. Grammarly was surfaced as a portfolio company of IVP.
 url: https://raw.githubusercontent.com/api-evangelist/grammarly/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.grammarly.com/favicon.ico
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - ivp
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Ai
-apis: []
+- Writing Assistance
+- Productivity
+- Natural Language Processing
+- Analytics
+- Content
+- OAuth
+- Enterprise
+apis:
+- name: Grammarly Analytics API
+  description: >-
+    Programmatic access to Grammarly usage and communication-performance
+    analytics for integration into business-intelligence systems.
+  humanURL: https://developer.grammarly.com/
+  baseURL: https://api.grammarly.com/ecosystem/api/
+  properties:
+  - type: Documentation
+    url: https://developer.grammarly.com/
+  - type: GettingStarted
+    url: https://developer.grammarly.com/your-first-api-request.html
+- name: Grammarly License Management API
+  description: >-
+    Allocate and reallocate Grammarly licenses from software asset management /
+    IT-governance tooling.
+  humanURL: https://developer.grammarly.com/
+  baseURL: https://api.grammarly.com/ecosystem/api/
+  properties:
+  - type: Documentation
+    url: https://developer.grammarly.com/
+- name: Grammarly Writing Score API
+  description: >-
+    Score content on correctness, engagement, clarity, and delivery for
+    organizational content governance (Beta).
+  humanURL: https://developer.grammarly.com/
+  baseURL: https://api.grammarly.com/ecosystem/api/
+  properties:
+  - type: Documentation
+    url: https://developer.grammarly.com/
+- name: Grammarly AI Detection API
+  description: >-
+    Detect AI-generated content and help demonstrate original authorship (Beta).
+  humanURL: https://developer.grammarly.com/
+  baseURL: https://api.grammarly.com/ecosystem/api/
+  properties:
+  - type: Documentation
+    url: https://developer.grammarly.com/
+- name: Grammarly Plagiarism Detection API
+  description: >-
+    Detect plagiarism against published sources to help teams produce original
+    work (Beta).
+  humanURL: https://developer.grammarly.com/
+  baseURL: https://api.grammarly.com/ecosystem/api/
+  properties:
+  - type: Documentation
+    url: https://developer.grammarly.com/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +98,64 @@ maintainers:
 common:
 - type: Website
   url: https://www.grammarly.com
+- type: DeveloperPortal
+  url: https://developer.grammarly.com/
+- type: Documentation
+  url: https://developer.grammarly.com/
+- type: APIReference
+  url: https://developer.grammarly.com/
+- type: GettingStarted
+  url: https://developer.grammarly.com/your-first-api-request.html
+- type: Support
+  url: https://support.grammarly.com/
+- type: Blog
+  url: https://www.grammarly.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/grammarly
+- type: Pricing
+  url: https://www.grammarly.com/plans
+- type: SignUp
+  url: https://www.grammarly.com/signup
+- type: TermsOfService
+  url: https://www.grammarly.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.grammarly.com/privacy-policy
+- type: StatusPage
+  url: https://status.grammarly.com
+- type: TrustCenter
+  url: security/grammarly-trust-center.yml
+- type: Compliance
+  url: https://www.grammarly.com/security
+- type: Security
+  url: https://hackerone.com/grammarly
+- type: Authentication
+  url: authentication/grammarly-authentication.yml
+- type: OAuthScopes
+  url: scopes/grammarly-scopes.yml
+- type: Packages
+  url: packages/grammarly-packages.yml
+- type: SDKs
+  url: packages/grammarly-packages.yml
+- type: WellKnown
+  url: well-known/grammarly-well-known.yml
+- type: SecurityTxt
+  url: well-known/grammarly-security.txt
+- type: LLMsTxt
+  url: llms/grammarly-llms.txt
+- type: Conventions
+  url: conventions/grammarly-conventions.yml
+- type: Lifecycle
+  url: lifecycle/grammarly-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/grammarly-lifecycle.yml
+- type: Conformance
+  url: conformance/grammarly-conformance.yml
+- type: DomainSecurity
+  url: security/grammarly-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/grammarly-vulnerability-disclosure.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

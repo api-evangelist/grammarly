@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.grammarly.com/
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://developer.grammarly.com/your-first-api-request.html
+maturity:
+  ga:
+  - Analytics API
+  - License Management API
+  beta:
+  - Writing Score API
+  - AI Detection API
+  - Plagiarism Detection API
+  coming_soon:
+  - Certified Readability Score API
+  - Tone Analysis API
+deprecation:
+  events:
+  - product: Grammarly Text Editor SDK (Grammarly for Developers)
+    status: deprecated
+    sunset_date: '2024-01-10'
+    note: >-
+      The original Text Editor SDK and its developer portal were deprecated /
+      paused on 2024-01-10; the current enterprise REST API platform at
+      developer.grammarly.com superseded it.
+  policy_url: null
+  sunset_header: unknown
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.grammarly.com
+notes: >-
+  Grammarly runs a live status page at status.grammarly.com. The Text Editor SDK
+  deprecation (Jan 2024) is a documented real deprecation event; no ongoing
+  formal deprecation-policy page or RFC 8594 Sunset-header contract is published.

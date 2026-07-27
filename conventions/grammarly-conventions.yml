@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.grammarly.com/your-first-api-request.html
+api_base_url: https://api.grammarly.com/ecosystem/api/
+authentication:
+  style: OAuth 2.0 client-credentials Bearer token
+  header: 'Authorization: Bearer <access_token>'
+  token_endpoint: https://auth.grammarly.com/v4/api/oauth2/token
+  ref: authentication/grammarly-authentication.yml
+versioning:
+  style: uri-path
+  observed: v2 segment on the Analytics API (e.g. /ecosystem/api/v2/analytics/users)
+  ref: lifecycle/grammarly-lifecycle.yml
+pagination:
+  style: query-parameter
+  params: [limit, date_from, date_to]
+  observed: >-
+    Analytics API list endpoints accept limit plus a date_from/date_to window
+    (e.g. ?limit=10&date_from=2024-10-01&date_to=2024-10-31).
+idempotency:
+  documented: false
+  notes: No idempotency-key header is documented for the Grammarly APIs at capture time.
+rate_limiting:
+  documented: false
+error_handling:
+  ref: null
+  notes: >-
+    No formal error-code registry or RFC 9457 problem+json envelope is published
+    on the developer portal at capture time.
+media_type: application/json
+notes: >-
+  Cross-cutting semantics derived from the published "Your first API request"
+  guide and the OAuth credentials reference. The APIs are REST over HTTPS,
+  JSON-encoded, OAuth2-secured, with uri-path versioning; no idempotency or
+  rate-limit signaling is documented, so no Idempotency pointer is emitted.

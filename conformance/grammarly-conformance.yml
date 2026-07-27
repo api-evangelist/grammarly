@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.grammarly.com/trust
+standards:
+- id: oauth2
+  conforms: true
+  evidence: OAuth 2.0 client-credentials flow documented at developer.grammarly.com/oauth-credentials.html
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: https://www.grammarly.com/.well-known/security.txt (RFC 9116)
+- id: soc2
+  conforms: true
+  evidence: Grammarly Trust Center references its SOC 2 Report and annual security certifications
+- id: iso-27001
+  conforms: true
+  evidence: Grammarly Trust Center references ISO certifications alongside its SOC 2 report
+- id: gdpr
+  conforms: true
+  evidence: Grammarly Trust Center / privacy program documents GDPR compliance
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error envelope published
+- id: oidc
+  conforms: false
+  evidence: No /.well-known/openid-configuration published (404/403 on all hosts)
+notes: >-
+  Compliance posture asserted from the public Grammarly Trust Center. SOC 2 and
+  ISO certifications are named as annual certifications; specific ISO sub-standard
+  numbers (27017/27018) were not individually enumerated on the trust page at
+  capture time.
