@@ -1,0 +1,43 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.grammarly.com/plans
+sources:
+- https://www.grammarly.com/plans
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Consumer/business writing assistant plans page; Pro shown as $12 USD with 7-day free trial. Enterprise
+  is quote-based.
+plan_count: 3
+currency: USD
+plans:
+- name: Free
+  price_text: $0 USD / month
+  price: 0
+  currency: USD
+  period: month
+  included_quota: Write without mistakes; See your writing tone; Generate text with 100 AI prompts
+- name: Pro
+  price_text: $12 USD
+  price: 12
+  currency: USD
+  period: month
+  included_quota: Everything in Free, plus unlimited personalized suggestions; Generate text with 2,000
+    AI prompts
+- name: Enterprise
+  price_text: Contact Sales
+  period: none
+  included_quota: Everything in Pro, plus dedicated support, BYOK encryption, DLP
+rate_limit_statements:
+- 100 prompts / month
+- 2,000 prompts / member / month
+- Unlimited prompts / member / month
