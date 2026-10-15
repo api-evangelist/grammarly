@@ -9,6 +9,37 @@ source:
 - clever/integrations/clever-integration-edges.yml
 - okta/integrations/okta-integration-edges.yml
 edges:
+- partner_name: eduGAIN
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: network-participant
+  direction: partner-built
+  evidence: https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
+  category: research and education identity federation
+  contract_reference:
+    network: eduGAIN (GÉANT interfederation)
+    spec_file: null
+    roles:
+    - service-provider
+    role: service-provider
+    federations:
+    - INCOMMON
+    matched_by: domain:grammarly.com
+    entities:
+    - entity_id: https://sso.grammarly.com/saml/metadata
+      role: service-provider
+      federation: INCOMMON
+      display_name: Grammarly
+      entity_categories:
+      - '43'
+      - '76'
+      sirtfi: true
+      coco: true
+    detected_by: sweep-higher-ed.py
+    detected: '2026-10-15'
+  detected_by: sweep-higher-ed.py
+  first_seen: '2026-10-15'
 - partner_name: Clever (clever-app-gallery)
   partner: clever
   partner_match: mirror
@@ -53,34 +84,3 @@ edges:
   - SAML
   - SWA
   - UPDATE
-- partner_name: eduGAIN
-  partner: null
-  type: register
-  channel: standard-directory
-  relationship: network-participant
-  direction: partner-built
-  evidence: https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
-  category: research and education identity federation
-  contract_reference:
-    network: eduGAIN (GÉANT interfederation)
-    spec_file: null
-    roles:
-    - service-provider
-    role: service-provider
-    federations:
-    - INCOMMON
-    matched_by: domain:grammarly.com
-    entities:
-    - entity_id: https://sso.grammarly.com/saml/metadata
-      role: service-provider
-      federation: INCOMMON
-      display_name: Grammarly
-      entity_categories:
-      - '43'
-      - '76'
-      sirtfi: true
-      coco: true
-    detected_by: sweep-higher-ed.py
-    detected: '2026-10-15'
-  detected_by: sweep-higher-ed.py
-  first_seen: '2026-10-15'
