@@ -61,3 +61,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: grammarly-zoom-own
+  label: Zoom (own)
+  partner: zoom
+  partner_name: Zoom (own)
+  category: Zoom app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.zoom.us/apps/tA-yVq4mQGugN8X71RKJWg
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

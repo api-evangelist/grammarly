@@ -5,6 +5,7 @@ checked:
 - https://technical.edugain.org/api.php?action=list_entities&type=idp&format=json
 - https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
 - okta/integrations/okta-integration-edges.yml
+- zoom/integrations/zoom-integration-edges.yml
 source:
 - clever/integrations/clever-integration-edges.yml
 - okta/integrations/okta-integration-edges.yml
@@ -84,3 +85,20 @@ edges:
   - SAML
   - SWA
   - UPDATE
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/tA-yVq4mQGugN8X71RKJWg
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Superhuman Go
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
