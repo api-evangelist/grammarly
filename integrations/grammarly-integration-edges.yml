@@ -2,6 +2,13 @@ generated: '2026-10-14'
 method: searched
 checked:
 - clever/integrations/clever-integration-edges.yml
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://technical.edugain.org/api.php?action=list_entities&type=idp&format=json
 - https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
 - okta/integrations/okta-integration-edges.yml
@@ -102,3 +109,60 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Zoom app
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@grammarly/focal
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@grammarly/focal'
+      version: 0.11.0
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/focal
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    - name: '@grammarly/react-textarea'
+      version: 0.11.2
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/react-textarea
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    - name: '@grammarly/textarea'
+      version: 0.11.2
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/textarea
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    - name: '@grammarly/vue-textarea'
+      version: 0.11.2
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/vue-textarea
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
