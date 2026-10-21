@@ -15,10 +15,129 @@ checked:
 - https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
 - okta/integrations/okta-integration-edges.yml
 - zoom/integrations/zoom-integration-edges.yml
+- atlassian/integrations/atlassian-integration-edges.yml
 source:
 - clever/integrations/clever-integration-edges.yml
 - okta/integrations/okta-integration-edges.yml
 edges:
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@grammarly/focal
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@grammarly/focal'
+      version: 0.11.0
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/focal
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    - name: '@grammarly/react-textarea'
+      version: 0.11.2
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/react-textarea
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    - name: '@grammarly/textarea'
+      version: 0.11.2
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/textarea
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    - name: '@grammarly/vue-textarea'
+      version: 0.11.2
+      released: '2025-11-04'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@grammarly/vue-textarea
+      repo_leg: github-org:grammarly
+      publisher_leg: email:grammarly.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: eduGAIN
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: network-participant
+  direction: partner-built
+  evidence: https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
+  category: research and education identity federation
+  contract_reference:
+    network: eduGAIN (GÉANT interfederation)
+    spec_file: null
+    roles:
+    - service-provider
+    role: service-provider
+    federations:
+    - INCOMMON
+    matched_by: domain:grammarly.com
+    entities:
+    - entity_id: https://sso.grammarly.com/saml/metadata
+      role: service-provider
+      federation: INCOMMON
+      display_name: Grammarly
+      entity_categories:
+      - '43'
+      - '76'
+      sirtfi: true
+      coco: true
+    detected_by: sweep-higher-ed.py
+    detected: '2026-10-19'
+  detected_by: sweep-higher-ed.py
+  first_seen: '2026-10-19'
+- partner_name: Cloud Security Alliance STAR Registry
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://cloudsecurityalliance.org/star/registry/grammarly/services/grammarly
+  category: Cloud security assurance
+  contract_reference:
+    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
+    spec_file: null
+    standard: CSA STAR
+    role: star-level-1
+    registered_name: Grammarly
+    registry_id: grammarly
+    service_url: https://www.grammarly.com
+    matched_domain: grammarly.com
+    matched_by: domain
+    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
+    levels:
+    - STAR Level 1
+    certified_products: []
+    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
+      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
+      = every instance marked (Deprecated) by the registry; service counts never recorded
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  detected_by: sweep-compliance-assurance.py
+  first_seen: '2026-10-20'
 - partner_name: Clever (clever-app-gallery)
   partner: clever
   partner_match: mirror
@@ -80,121 +199,20 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Zoom app
-- partner_name: npm registry
-  partner: npm
-  partner_match: register
-  type: register
-  direction: provider-built
-  category: official SDK (JavaScript/TypeScript)
-  evidence: https://www.npmjs.com/package/@grammarly/focal
-  channel: package-registry
-  relationship: distribution-channel
-  contract_reference:
-    register: npm registry (public registry JSON)
-    spec_file: null
-    language: JavaScript/TypeScript
-    packages:
-    - name: '@grammarly/focal'
-      version: 0.11.0
-      released: '2025-11-04'
-      released_field: modified
-      lapsed: false
-      page: https://www.npmjs.com/package/@grammarly/focal
-      repo_leg: github-org:grammarly
-      publisher_leg: email:grammarly.com
-      matched_by: domain
-    - name: '@grammarly/react-textarea'
-      version: 0.11.2
-      released: '2025-11-04'
-      released_field: modified
-      lapsed: false
-      page: https://www.npmjs.com/package/@grammarly/react-textarea
-      repo_leg: github-org:grammarly
-      publisher_leg: email:grammarly.com
-      matched_by: domain
-    - name: '@grammarly/textarea'
-      version: 0.11.2
-      released: '2025-11-04'
-      released_field: modified
-      lapsed: false
-      page: https://www.npmjs.com/package/@grammarly/textarea
-      repo_leg: github-org:grammarly
-      publisher_leg: email:grammarly.com
-      matched_by: domain
-    - name: '@grammarly/vue-textarea'
-      version: 0.11.2
-      released: '2025-11-04'
-      released_field: modified
-      lapsed: false
-      page: https://www.npmjs.com/package/@grammarly/vue-textarea
-      repo_leg: github-org:grammarly
-      publisher_leg: email:grammarly.com
-      matched_by: domain
-    current: true
-    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
-      24 months'
-    detected_by: sweep-official-sdks.py
-    detected: '2026-10-18'
-  detected_by: sweep-official-sdks.py
-  first_seen: '2026-10-18'
-- partner_name: Cloud Security Alliance STAR Registry
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://cloudsecurityalliance.org/star/registry/grammarly/services/grammarly
-  category: Cloud security assurance
-  contract_reference:
-    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
-    spec_file: null
-    standard: CSA STAR
-    role: star-level-1
-    registered_name: Grammarly
-    registry_id: grammarly
-    service_url: https://www.grammarly.com
-    matched_domain: grammarly.com
-    matched_by: domain
-    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
-    levels:
-    - STAR Level 1
-    certified_products: []
-    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
-      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
-      = every instance marked (Deprecated) by the registry; service counts never recorded
-    detected_by: sweep-compliance-assurance.py
-    detected: '2026-10-20'
-  detected_by: sweep-compliance-assurance.py
-  first_seen: '2026-10-20'
-- partner_name: eduGAIN
-  partner: null
-  type: register
-  channel: standard-directory
-  relationship: network-participant
-  direction: partner-built
-  evidence: https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
-  category: research and education identity federation
-  contract_reference:
-    network: eduGAIN (GÉANT interfederation)
-    spec_file: null
-    roles:
-    - service-provider
-    role: service-provider
-    federations:
-    - INCOMMON
-    matched_by: domain:grammarly.com
-    entities:
-    - entity_id: https://sso.grammarly.com/saml/metadata
-      role: service-provider
-      federation: INCOMMON
-      display_name: Grammarly
-      entity_categories:
-      - '43'
-      - '76'
-      sirtfi: true
-      coco: true
-    detected_by: sweep-higher-ed.py
-    detected: '2026-10-15'
-  detected_by: sweep-higher-ed.py
-  first_seen: '2026-10-15'
+- partner_name: Atlassian (own)
+  partner: atlassian
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.atlassian.com/vendors/1225006/grammarly-app-actions
+  mirror_of: atlassian/integrations/atlassian-integration-edges.yml
+  apps:
+  - Grammarly for Confluence
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: Workflow
