@@ -123,58 +123,6 @@
     detected: '2026-10-20'
   status: not-a-workflow
   arazzo: null
-- slug: grammarly-clever-clever-app-gallery
-  label: Clever (clever-app-gallery)
-  partner: clever
-  partner_name: Clever (clever-app-gallery)
-  category: other
-  type: marketplace
-  marketplace: clever-app-gallery
-  channel: partner-built
-  evidence: https://clever.com/app-gallery
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: grammarly-okta-own
-  label: Okta (own)
-  partner: okta
-  partner_name: Okta (own)
-  category: Single Sign-On
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://www.okta.com/integrations/grammarly/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: grammarly-zoom-own
-  label: Zoom (own)
-  partner: zoom
-  partner_name: Zoom (own)
-  category: Zoom app
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.zoom.us/apps/tA-yVq4mQGugN8X71RKJWg
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: grammarly-atlassian-own
-  label: Atlassian (own)
-  partner: atlassian
-  partner_name: Atlassian (own)
-  category: Workflow
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.atlassian.com/vendors/1225006/grammarly-app-actions
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: grammarly-mozilla-firefox-add-ons-amo
   label: Mozilla Firefox Add-ons (AMO)
   partner_name: Mozilla Firefox Add-ons (AMO)
@@ -244,5 +192,70 @@
       lapsed: false
     detected_by: sweep-tx-ramp-certified-cloud.py
     detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
+- slug: grammarly-clever-clever-app-gallery
+  label: Clever (clever-app-gallery)
+  partner: clever
+  partner_name: Clever (clever-app-gallery)
+  category: other
+  type: marketplace
+  marketplace: clever-app-gallery
+  channel: partner-built
+  evidence: https://clever.com/app-gallery
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: grammarly-okta-own
+  label: Okta (own)
+  partner: okta
+  partner_name: Okta (own)
+  category: Single Sign-On
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.okta.com/integrations/grammarly/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: grammarly-zoom-own
+  label: Zoom (own)
+  partner: zoom
+  partner_name: Zoom (own)
+  category: Zoom app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.zoom.us/apps/tA-yVq4mQGugN8X71RKJWg
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: grammarly-atlassian-own
+  label: Atlassian (own)
+  partner: atlassian
+  partner_name: Atlassian (own)
+  category: Workflow
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.atlassian.com/vendors/1225006/grammarly-app-actions
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: grammarly-hugging-face-hugging-face-hub
+  label: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_name: Hugging Face (hugging-face-hub)
+  category: Hugging Face Hub datasets
+  type: marketplace
+  marketplace: hugging-face-hub
+  channel: partner-built
+  evidence: https://huggingface.co/grammarly
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null

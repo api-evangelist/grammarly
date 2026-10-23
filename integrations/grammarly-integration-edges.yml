@@ -20,6 +20,7 @@ checked:
 - https://addons.mozilla.org/api/v5/addons/search/?type=extension&app=firefox
 - https://chromewebstore.google.com/sitemap
 - https://dir.texas.gov/resource-library-item/tx-ramp-certified-cloud-products
+- hugging-face/integrations/hugging-face-integration-edges.yml
 source:
 - clever/integrations/clever-integration-edges.yml
 - okta/integrations/okta-integration-edges.yml
@@ -142,6 +143,81 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
+- partner_name: Mozilla Firefox Add-ons (AMO)
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: firefox-add-ons
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/
+  app: 'Grammarly: AI Writing and Grammar Checker App'
+  listing_count: 1
+  category: browser extension (Firefox Add-ons)
+  partner_url: https://addons.mozilla.org/
+  contract_reference:
+    register: 'Firefox Add-ons (addons.mozilla.org public API v5 search: authors, homepage, support_url)'
+    spec_file: null
+    role: firefox-add-on-publisher
+    registered_name: Grammarly
+    register_id: https://addons.mozilla.org/api/v5/addons/addon/grammarly-1/
+    matched_domain: grammarly.com
+    matched_by: domain
+    matched_name: Grammarly
+    builder: publisher
+    signal_note: ONE edge per provider for the store; listing alone = participation. The AMO author name (builder
+      publisher) or homepage + support_url both on the provider's domain (builder domain-attested) identifies it;
+      extension / user counts are context, never counted. No Mozilla repo in all/*, so no platform-side edge exists
+      to mirror.
+    detected_by: sweep-browser-extension-stores.py
+    detected: '2026-10-21'
+  detected_by: sweep-browser-extension-stores.py
+  first_seen: '2026-10-21'
+- partner_name: TX-RAMP
+  partner: null
+  partner_match: register
+  partner_tier: Level 2
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://dir.texas.gov/resource-library-item/tx-ramp-certified-cloud-products
+  category: Texas state cloud security certification (TX-RAMP)
+  contract_reference:
+    register: TX-RAMP Certified Cloud Products (Texas DIR)
+    standard: TX-RAMP
+    spec_file: null
+    role: tx-ramp-certified
+    register_file: https://dir.texas.gov/sites/default/files/2026-10/Copy%20of%20TX-RAMP%20Certified%20Cloud%20Products_1.xlsx
+    registrations:
+    - certification_id: TX1009464
+      product: Grammarly
+      registered_vendor: Grammarly
+      certification_level: Level 2
+      cloud_categories:
+      - SaaS
+      certification_path: TX-RAMP Fast Track
+      expires: '2027-02-15'
+      lapsed: false
+      matched_domain: grammarly.com
+      matched_by: domain
+    identity: wikidata Q16840770 'Grammarly' P856 https://www.grammarly.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    signal_note: 'certified_products = one entry per cloud category (SaaS / PaaS / IaaS) the vendor holds a TX-RAMP
+      certification in, never per product; products are context, never counted. certification_level = the highest
+      level in that category; lapsed: true when every product in the category is past its expiry date. partner_tier
+      = the highest CURRENT level'
+    certified_products:
+    - product: SaaS
+      product_type: SaaS
+      standard: TX-RAMP
+      certification_level: Level 2
+      lapsed: false
+    detected_by: sweep-tx-ramp-certified-cloud.py
+    detected: '2026-10-22'
+  detected_by: sweep-tx-ramp-certified-cloud.py
+  first_seen: '2026-10-22'
 - partner_name: Clever (clever-app-gallery)
   partner: clever
   partner_match: mirror
@@ -220,78 +296,34 @@ edges:
   detected: '2026-10-21'
   detected_by: mirror-platform-listings.py
   category: Workflow
-- partner_name: Mozilla Firefox Add-ons (AMO)
-  partner: null
-  partner_match: null
+- partner_name: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_match: mirror
+  mirror_match: domain
   type: marketplace
-  marketplace: firefox-add-ons
-  channel: partner-built
   relationship: platform-app
   direction: third-party
-  evidence: https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/
-  app: 'Grammarly: AI Writing and Grammar Checker App'
-  listing_count: 1
-  category: browser extension (Firefox Add-ons)
-  partner_url: https://addons.mozilla.org/
-  contract_reference:
-    register: 'Firefox Add-ons (addons.mozilla.org public API v5 search: authors, homepage, support_url)'
-    spec_file: null
-    role: firefox-add-on-publisher
-    registered_name: Grammarly
-    register_id: https://addons.mozilla.org/api/v5/addons/addon/grammarly-1/
-    matched_domain: grammarly.com
-    matched_by: domain
-    matched_name: Grammarly
-    builder: publisher
-    signal_note: ONE edge per provider for the store; listing alone = participation. The AMO author name (builder
-      publisher) or homepage + support_url both on the provider's domain (builder domain-attested) identifies it;
-      extension / user counts are context, never counted. No Mozilla repo in all/*, so no platform-side edge exists
-      to mirror.
-    detected_by: sweep-browser-extension-stores.py
-    detected: '2026-10-21'
-  detected_by: sweep-browser-extension-stores.py
-  first_seen: '2026-10-21'
-- partner_name: TX-RAMP
-  partner: null
-  partner_match: register
-  partner_tier: Level 2
-  type: contract
-  channel: regulator-register
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://dir.texas.gov/resource-library-item/tx-ramp-certified-cloud-products
-  category: Texas state cloud security certification (TX-RAMP)
-  contract_reference:
-    register: TX-RAMP Certified Cloud Products (Texas DIR)
-    standard: TX-RAMP
-    spec_file: null
-    role: tx-ramp-certified
-    register_file: https://dir.texas.gov/sites/default/files/2026-10/Copy%20of%20TX-RAMP%20Certified%20Cloud%20Products_1.xlsx
-    registrations:
-    - certification_id: TX1009464
-      product: Grammarly
-      registered_vendor: Grammarly
-      certification_level: Level 2
-      cloud_categories:
-      - SaaS
-      certification_path: TX-RAMP Fast Track
-      expires: '2027-02-15'
-      lapsed: false
-      matched_domain: grammarly.com
-      matched_by: domain
-    identity: wikidata Q16840770 'Grammarly' P856 https://www.grammarly.com/
-    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
-    signal_note: 'certified_products = one entry per cloud category (SaaS / PaaS / IaaS) the vendor holds a TX-RAMP
-      certification in, never per product; products are context, never counted. certification_level = the highest
-      level in that category; lapsed: true when every product in the category is past its expiry date. partner_tier
-      = the highest CURRENT level'
-    certified_products:
-    - product: SaaS
-      product_type: SaaS
-      standard: TX-RAMP
-      certification_level: Level 2
-      lapsed: false
-    detected_by: sweep-tx-ramp-certified-cloud.py
-    detected: '2026-10-22'
-  detected_by: sweep-tx-ramp-certified-cloud.py
-  first_seen: '2026-10-22'
+  channel: partner-built
+  marketplace: hugging-face-hub
+  evidence: https://huggingface.co/grammarly
+  mirror_of: hugging-face/integrations/hugging-face-integration-edges.yml
+  apps:
+  - grammarly/coedit
+  - grammarly/pseudonymization-data
+  - grammarly/medit
+  - grammarly/spivavtor
+  - grammarly/detexd-benchmark
+  - grammarly/coedit-large
+  - grammarly/coedit-xl
+  - grammarly/coedit-xxl
+  - grammarly/spivavtor-large
+  - grammarly/coedit-xl-composite
+  - grammarly/detexd-roberta-base
+  - grammarly/spivavtor-xxl
+  - grammarly/brain_query_to_pack_classifier
+  listing_count: 2
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Hugging Face Hub datasets
+  badges:
+  - Verified publisher (Hugging Face verified organisation)
