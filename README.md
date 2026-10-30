@@ -64,6 +64,117 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Grammarly is a company surfaced as a portfolio company of ivp and added to the API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.
+Grammarly is an AI writing-assistance company whose enterprise developer platform exposes a set of REST APIs that bring Grammarly's writing intelligence into an organization's own applications, business-intelligence systems, and IT tooling. The Grammarly APIs cover writing-quality scoring, AI generated-content detection, plagiarism detection, communication analytics, and license management, all secured with OAuth 2.0 client credentials and scoped permissions against the base URL https://api.grammarly.com/ecosystem/api/. Certified Readability Score and Tone Analysis APIs are announced as coming soon. Grammarly was surfaced as a portfolio company of IVP.
 
-Backed by: ivp — https://www.grammarly.com
+**Areas:** Company · Artificial Intelligence · Writing Assistance · Productivity · Natural Language Processing · Analytics · Content · Authentication · Enterprise
+
+## Grammarly on APIs.io
+
+Everything profiled for Grammarly is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/grammarly/](https://apis.io/providers/grammarly/)** — or go straight to one of the APIs or properties below.
+
+### APIs (5)
+
+- [Grammarly Analytics API](https://apis.io/apis/grammarly/grammarly-analytics-api/) — Programmatic access to Grammarly usage and communication-performance analytics for integration into business-intelligence systems.
+- [Grammarly License Management API](https://apis.io/apis/grammarly/grammarly-license-management-api/) — Allocate and reallocate Grammarly licenses from software asset management / IT-governance tooling.
+- [Grammarly Writing Score API](https://apis.io/apis/grammarly/grammarly-writing-score-api/) — Score content on correctness, engagement, clarity, and delivery for organizational content governance (Beta).
+- [Grammarly AI Detection API](https://apis.io/apis/grammarly/grammarly-ai-detection-api/) — Detect AI-generated content and help demonstrate original authorship (Beta).
+- [Grammarly Plagiarism Detection API](https://apis.io/apis/grammarly/grammarly-plagiarism-detection-api/) — Detect plagiarism against published sources to help teams produce original work (Beta).
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Grammarly Authentication](https://apis.io/security/grammarly/grammarly-authentication/)
+- [Grammarly Domain Security](https://apis.io/security/grammarly/grammarly-domain-security/)
+- [Grammarly Trust Center](https://apis.io/security/grammarly/grammarly-trust-center/)
+- [Grammarly Vulnerability Disclosure](https://apis.io/security/grammarly/grammarly-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Grammarly Scopes](https://apis.io/scopes/grammarly/grammarly-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Grammarly Plans Pricing](https://apis.io/plans/grammarly/grammarly-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.grammarly.com)
+- [Documentation](https://developer.grammarly.com/)
+- [Getting started](https://developer.grammarly.com/your-first-api-request.html)
+- [API reference](https://developer.grammarly.com/)
+- [Pricing](https://www.grammarly.com/plans)
+- [Sign up](https://www.grammarly.com/signup)
+- [Support](https://support.grammarly.com/)
+- [Blog](https://www.grammarly.com/blog/)
+- [Security](https://hackerone.com/grammarly)
+- [Compliance](https://www.grammarly.com/security)
+- [Terms of service](https://www.grammarly.com/terms-of-service)
+- [Privacy policy](https://www.grammarly.com/privacy-policy)
+- [GitHub](https://github.com/grammarly)
+- [Status](https://status.grammarly.com)
+
+## API Evangelist rating
+
+**Kin Score 47.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 81.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 38.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/grammarly/](https://apis.io/providers/grammarly/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Grammarly: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/grammarly/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
